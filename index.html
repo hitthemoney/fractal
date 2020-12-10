@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Fractal</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/consts.js"></script>
+    <script defer src="./js/index.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <div id="mainContainer">
+                    <h1 id="title">
+                        <!--Mandelbrot Set -->Fractal</h1>
+                    <h2 id="subTitle">By <a href="https://hitthemoney.com" target="_blank">hitthemoney</a></h2>
+                    <div id="settings">
+                        <p><span>Scale: </span><input id="sett-scale" step="0.01" onchange="w(_=> scale = this.value)" type="number"></p>
+                        <p><span>Nodes' Size: </span><input id="sett-nodes" onchange="w(_=> nodes = this.value)" type="number"></p>
+                        <p><span>Center X: </span><input id="sett-centerx" step="0.01" onchange="w(_=> center.x = this.value)" type="number"></p>
+                        <p><span>Center Y: </span><input id="sett-centery" step="0.01" onchange="w(_=> center.y = this.value)" type="number"></p>
+                        <p><span>Iterations: </span><input id="sett-iterations" onchange="w(_=> iterations = this.value)" type="number"></p>
+                        <p><span>Width: </span><input id="sett-width" onchange="w(_=> canvas.width = this.value)" type="number"></p>
+                        <p><span>Height: </span><input id="sett-height" onchange="w(_=> canvas.height = this.value)" type="number"></p>
+                        <p><span>Background Color: </span><input id="sett-bgcol" onchange="w(_=> backgroundCol = this.value)" type="color"></p>
+                        <p><span>Main Color: </span><input id="sett-fraccol" onchange="w(_=> fractalCol = this.value)" type="color"></p>
+                        <p><span>Nodes' Color: </span><input id="sett-nodecol" onchange="w(_=> nodeCol = this.value)" type="color"></p>
+                    </div>
+                    <h3>About:</h3>
+                    <p id="description">This is a Mandelbrot set example in WebGL</p>
+                </div>
+            </td>
+            <td>
+                <div id="canvasContainer">
+                    <canvas id="fractal"></canvas>
+                    <div id="resultInfo">
+                        <span>Result <b id="res-width"></b> x <b id="res-height"></b></span>
+                        <button id="exportBtn" onclick="downloadURL(canvas.toDataURL(`image/png`), `fractal.png`)">Export as PNG</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

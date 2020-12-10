@@ -1,0 +1,105 @@
+:root {
+    --boxWidth: 250px;
+}
+
+html,
+body {
+    background-color: rgb(30, 34, 46);
+}
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    transition: 0.1s;
+}
+
+input,
+button {
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 10px;
+}
+
+td {
+    vertical-align: top;
+}
+
+/*#fractal {
+    height: 512;
+    width: 512;
+}*/
+
+a {
+    text-decoration: none;
+    color: rgb(0, 89, 255);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#settings {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 1px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 10px;
+    border: rgba(0, 0, 0, 0.25) 1px solid;
+}
+
+#settings>p>input {
+    float: right;
+}
+
+#mainContainer {
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    padding: 1px 10px;
+    margin-right: 7.5px;
+    max-width: var(--boxWidth);
+    width: var(--boxWidth);
+    min-width: var(--boxWidth);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 10px;
+    border: rgba(0, 0, 0, 0.25) 1px solid;
+}
+
+#exportBtn {
+    /* display: block; */
+    /* margin: 0 auto; */
+    font-size: 18px;
+    float: right;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+}
+
+button:hover,
+input:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+#canvasContainer {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 10px;
+    border: rgba(0, 0, 0, 0.25) 1px solid;
+}
+
+#canvasContainer > canvas {
+    border-radius: 8px;
+}
+
+#resultInfo {
+    padding: 3px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
