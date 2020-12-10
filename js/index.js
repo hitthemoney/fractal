@@ -28,7 +28,7 @@ let iterations = $("#sett-iterations").value = 100;
 let scale = $("#sett-scale").value = 1.5;
 let nodes = $("#sett-nodes").value = 75;
 let center = {
-    x: 0.7,
+    x: 0.75,
     y: 0
 };
 $("#sett-centerx").value = center.x;
