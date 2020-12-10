@@ -93,7 +93,7 @@ void main() {
     vec2 c = _coordinates * scale - center,
         z; 
     for (int i = 0; i < 10000; i++) {
-        if (i > maxIts) break;
+        if (i > maxIts) break; // a way to solve the Loop index cannot be compared with non-constant expression error
         z = f(z, c);
         float x = (float(i) - log(log(length(z))));
         gl_FragColor = vec4(mix(bgCol, nodeCol, x * (nodes / 1000.)), 1);
