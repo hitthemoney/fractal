@@ -48,8 +48,9 @@ a:hover {
     border: rgba(0, 0, 0, 0.25) 1px solid;
 }
 
-#settings>p>input {
+#settings > p >input {
     float: right;
+    width: 75px
 }
 
 #mainContainer {
